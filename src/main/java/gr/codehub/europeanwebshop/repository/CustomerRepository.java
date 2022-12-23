@@ -13,10 +13,8 @@ import java.util.List;
  * @author iracl
  */
 public interface CustomerRepository {
-    
     List<Customer> findAll();
     void createCustomer(Customer customer) throws CustomerException;
-
-    public Customer findById(long customerId);
-    
+    Customer findById(long customerId)  throws CustomerException;
+    boolean deleteCustomer(long customerId)  ;
 }

@@ -1,0 +1,118 @@
+POST ~/login
+	{"username":"xxx",
+	"password":"xxx"
+	}
+	
+POST ~/signup
+	{"username":"xxx",
+	"password":"xxx"
+	}
+
+--------------------------------------------------------------------
+-- customer management
+
+GET ~/customer/
+
+GET ~/customer/{customerID}
+
+GET ~/customer?pageCount=<2>&pageSize=<20>
+
+GET ~/customer?name=<iracl>
+
+POST ~/customer
+	{"name":"George",
+	"address":"Athens",
+	"email":"george@mail.gr"
+	}
+
+PUT ~/customer/{customerID}
+	{"name":"George",
+	"address":"Kifisia",
+	"email":"george@mail.gr"
+	}
+
+PATCH ~/customer/{customerID}
+	{ "address":"Kifisia"}
+	
+DELETE ~/customer/{customerID}
+
+
+------- product resource has the same endpoints
+
+
+GET ~/product/{productID}
+
+GET ~/product/
+
+GET ~/product?pageCount=<2>&pageSize=<20>
+
+GET ~/product?name=<iracl>
+
+POST ~/product
+	{"name":"nack",
+	"price":10.15,
+	"stock":15
+	}
+
+PUT ~/product/{productID}
+	{"name":"nack",
+	"price":12.15,
+	"stock":15
+	}
+
+PATCH ~/product/{productID}
+	{ "price":12.15}
+	
+DELETE ~/product/{productID}
+
+
+--------------------------------
+--  make an order
+
+POST ~/order/customer/{customerId}
+	{
+		"deliveryAddress":"street Number",
+		"dueDate":"2022-12-28"
+	}
+
+GET ~/order/{orderId}
+
+PUT  ~/order/{orderId}
+ {
+		"deliveryAddress":"road Number",
+		"dueDate":"2022-12-28"
+ }
+ 
+POST ~/order/{orderId}/product/ 
+	{
+		"productId":"productr",
+		"quantity":5,
+		"comment":"any comment"
+	}
+	or
+	
+	[
+	{
+		"productId":"productr",
+		"quantity":5,
+		"comment":"any comment"
+	},
+	{
+		"productId":"productr",
+		"quantity":6,
+		"comment":"any comment"
+	},
+	{
+		"productId":"productr",
+		"quantity":8,
+		"comment":"any comment"
+	}
+	]
+
+
+-- reports	
+GET ~/order/customer/{customerID}?dateFrom=2022-01-01&dateTo=2022-12-31
+
+ 	
+GET ~/sales/customer/{customerID}?dateFrom=2022-01-01&dateTo=2022-12-31
+

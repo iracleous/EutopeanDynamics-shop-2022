@@ -30,7 +30,7 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    public CustomerDto getCustomer(long customerId) {
+    public CustomerDto getCustomer(long customerId) throws CustomerException{
             return new CustomerDto(customerRepository.findById(customerId));
     }
 
@@ -39,5 +39,8 @@ public class CustomerServiceImpl implements CustomerService{
             customerRepository.createCustomer(customer.asCustomer());
     }
     
-    
+     @Override
+    public  boolean deleteCustomer(long customerId){
+        return customerRepository.deleteCustomer(customerId);
+    }
 }

@@ -36,8 +36,19 @@ public class CustomerRepositoryImpl implements CustomerRepository{
 
     @Override
     @Transactional
-    public Customer findById(long customerId) {
-        return entityManager.find(Customer.class, customerId);
+    public Customer findById(long customerId)  throws CustomerException{
+        Customer customer =  entityManager.find(Customer.class, customerId);
+        if (customer==null) throw new CustomerException("customer not found");
+        return customer;
+    }
+
+    @Override
+     @Transactional   
+    public boolean deleteCustomer(long customerId)    {
+        Customer customer =  entityManager.find(Customer.class, customerId);
+        if (customer==null) return false;
+        entityManager.remove(customer);
+        return true;
     }
     
 }

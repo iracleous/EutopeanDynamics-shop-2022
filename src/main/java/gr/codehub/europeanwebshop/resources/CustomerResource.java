@@ -1,14 +1,17 @@
 package gr.codehub.europeanwebshop.resources;
 
 import gr.codehub.europeanwebshop.dto.CustomerDto;
+import gr.codehub.europeanwebshop.dto.RestApiResult;
 import gr.codehub.europeanwebshop.exception.CustomerException;
 import gr.codehub.europeanwebshop.model.Customer;
 import gr.codehub.europeanwebshop.service.CustomerService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.DELETE;
  import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Response;
 import java.util.ArrayList;
@@ -39,6 +42,21 @@ public class CustomerResource {
        return customerService.geCustomers();
     }
     
+    @GET
+    @Path("customer/{customerID}")
+    @Produces("application/json")
+    public RestApiResult<CustomerDto> getCustomer(@PathParam("customerID") long customerID){
+        try{
+        CustomerDto customer =customerService.getCustomer(customerID);
+        return new RestApiResult<CustomerDto>(customer,0,"successful");
+        }
+        catch(Exception e){
+            return new RestApiResult<CustomerDto>(null,100,e.getMessage());
+        }
+       
+    }
+    
+    
     @POST
     @Path("customer")
     @Produces("application/json")
@@ -47,4 +65,13 @@ public class CustomerResource {
         customerService.createCustomer(customer);
     }
     
+    
+    
+    @DELETE
+     @Path("customer/{customerID}")
+    @Produces("application/json")
+    public boolean deleteCustomer(@PathParam("customerID") long customerID){
+        return customerService.deleteCustomer(customerID);
+    }
+   
 }

@@ -15,6 +15,7 @@ import java.util.List;
 public interface CustomerService {
         
     List<CustomerDto> geCustomers();
-    CustomerDto getCustomer(long customerId);
+    CustomerDto getCustomer(long customerId) throws CustomerException;
     public void createCustomer(CustomerDto customer)  throws CustomerException;
+    boolean deleteCustomer(long customerId);
 }
