@@ -1,3 +1,9 @@
-gr\codehub\europeanwebshop\model\Person.class
-gr\codehub\europeanwebshop\resources\JavaEE8Resource.class
+gr\codehub\europeanwebshop\repository\CustomerRepository.class
+gr\codehub\europeanwebshop\dto\CustomerDto.class
+gr\codehub\europeanwebshop\resources\CustomerResource.class
+gr\codehub\europeanwebshop\exception\CustomerException.class
+gr\codehub\europeanwebshop\service\CustomerServiceImpl.class
 gr\codehub\europeanwebshop\JAXRSConfiguration.class
+gr\codehub\europeanwebshop\repository\CustomerRepositoryImpl.class
+gr\codehub\europeanwebshop\model\Customer.class
+gr\codehub\europeanwebshop\service\CustomerService.class

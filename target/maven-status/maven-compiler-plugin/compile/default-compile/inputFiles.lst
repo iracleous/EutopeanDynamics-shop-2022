@@ -1,3 +1,9 @@
-C:\Users\iracl\OneDrive\Documents\NetBeansProjects\europeanWebShop\src\main\java\gr\codehub\europeanwebshop\resources\JavaEE8Resource.java
+C:\Users\iracl\OneDrive\Documents\NetBeansProjects\europeanWebShop\src\main\java\gr\codehub\europeanwebshop\model\Customer.java
+C:\Users\iracl\OneDrive\Documents\NetBeansProjects\europeanWebShop\src\main\java\gr\codehub\europeanwebshop\service\CustomerService.java
+C:\Users\iracl\OneDrive\Documents\NetBeansProjects\europeanWebShop\src\main\java\gr\codehub\europeanwebshop\repository\CustomerRepositoryImpl.java
+C:\Users\iracl\OneDrive\Documents\NetBeansProjects\europeanWebShop\src\main\java\gr\codehub\europeanwebshop\resources\CustomerResource.java
+C:\Users\iracl\OneDrive\Documents\NetBeansProjects\europeanWebShop\src\main\java\gr\codehub\europeanwebshop\repository\CustomerRepository.java
+C:\Users\iracl\OneDrive\Documents\NetBeansProjects\europeanWebShop\src\main\java\gr\codehub\europeanwebshop\dto\CustomerDto.java
 C:\Users\iracl\OneDrive\Documents\NetBeansProjects\europeanWebShop\src\main\java\gr\codehub\europeanwebshop\JAXRSConfiguration.java
-C:\Users\iracl\OneDrive\Documents\NetBeansProjects\europeanWebShop\src\main\java\gr\codehub\europeanwebshop\model\Person.java
+C:\Users\iracl\OneDrive\Documents\NetBeansProjects\europeanWebShop\src\main\java\gr\codehub\europeanwebshop\exception\CustomerException.java
+C:\Users\iracl\OneDrive\Documents\NetBeansProjects\europeanWebShop\src\main\java\gr\codehub\europeanwebshop\service\CustomerServiceImpl.java
