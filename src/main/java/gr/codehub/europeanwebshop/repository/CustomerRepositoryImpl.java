@@ -29,9 +29,9 @@ public class CustomerRepositoryImpl implements CustomerRepository{
     }
 
     @Override
+   @Transactional
     public void createCustomer(Customer customer) throws CustomerException {
             entityManager.persist(customer);
-    
     }
 
     @Override

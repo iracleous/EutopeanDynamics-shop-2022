@@ -25,7 +25,7 @@ public class CustomerServiceImpl implements CustomerService{
     public List<CustomerDto> geCustomers() {
        return customerRepository.findAll()
                .stream()
-               .map(CustomerDto::new)
+               .map(customer -> new CustomerDto(customer))
                .toList();
     }
 
@@ -36,7 +36,7 @@ public class CustomerServiceImpl implements CustomerService{
 
     @Override
     public void createCustomer(CustomerDto customer)  throws CustomerException {
-            customerRepository.createCustomer(customer.getCustomer());
+            customerRepository.createCustomer(customer.asCustomer());
     }
     
     

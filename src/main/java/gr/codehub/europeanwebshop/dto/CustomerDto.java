@@ -34,11 +34,11 @@ public class CustomerDto {
         
     }
     public CustomerDto(Customer customer){
-        this.id =id;
-        this.name =name;
+        this.id =customer.getId();
+        this.name=customer.getName();
     }
     
-    public Customer getCustomer(){
+    public Customer asCustomer(){
         Customer customer =new Customer();
         customer.setId(id);
         customer.setName(name);
