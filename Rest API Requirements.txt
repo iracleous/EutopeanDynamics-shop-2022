@@ -12,12 +12,13 @@ POST ~/signup
 -- customer management
 
 GET ~/customer/
+GET ~/customer?name=<iracl>
 
 GET ~/customer/{customerID}
 
 GET ~/customer?pageCount=<2>&pageSize=<20>
 
-GET ~/customer?name=<iracl>
+
 
 POST ~/customer
 	{"name":"George",
